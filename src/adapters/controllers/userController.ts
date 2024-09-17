@@ -35,8 +35,8 @@ class userController {
       if(!response?.status){       
         res.status(401).json(response)
       }
-      res.cookie("userToken",response.data.token,{ httpOnly: true, maxAge: 3600000 })
-      res.cookie("userRefreshToken",response.data.refreshToken,{ httpOnly: true, maxAge: 30 * 24 * 60 * 60 * 1000 })
+      res.cookie("userToken",response.data.token,{ httpOnly: true, maxAge: 3600000 , secure : process.env.NODE_ENV != "development" })
+      res.cookie("userRefreshToken",response.data.refreshToken,{ httpOnly: true, maxAge: 30 * 24 * 60 * 60 * 1000,secure : process.env.NODE_ENV != "development" })
       res.status(200).json({status:true,message:response.message,data:response.data.user})
     } catch (error) {
       console.log(error)
@@ -61,7 +61,6 @@ class userController {
       if(!response?.status){
         return res.status(401).json(response)
       }
-      console.log(response)
       res.status(200).json(response)
     } catch (error) {
       console.log(error)

@@ -18,6 +18,7 @@ const userAuth = async (req: Request, res: Response, next: NextFunction) => {
       res.cookie("userToken", newUserToken, {
         httpOnly: true,
         maxAge: 3600000,
+        secure : process.env.NODE_ENV != "production"
       });
       userToken = newUserToken;
     } catch (error) {
