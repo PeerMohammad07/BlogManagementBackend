@@ -18,7 +18,7 @@ dotenv_1.default.config();
 app.use((0, morgan_1.default)("dev"));
 // Setting Cors 
 app.use((0, cors_1.default)({
-    origin: "http://localhost:5000",
+    origin: "https://blog-management-system-omega.vercel.app",
     credentials: true,
 }));
 app.use((0, cookie_parser_1.default)());
@@ -31,9 +31,9 @@ app.use("/api", userRouter_1.default);
 // Mongodb Connect
 (0, db_1.default)();
 // Server 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
-    console.log("Server is running : http://localhost:3000");
+    console.log("Server is running : http://localhost:4000");
 });
 exports.default = app;
 //# sourceMappingURL=server.js.map
