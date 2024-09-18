@@ -19,7 +19,10 @@ app.use(morgan("dev"))
 app.use(cors({
   origin: "https://blog-management-client.vercel.app",
   credentials: true,
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 
 app.options('*', cors());
 
