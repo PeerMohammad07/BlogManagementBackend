@@ -7,4 +7,3 @@ cloudinary_1.v2.config({
     api_secret: 'uLLV_R0lkvchP4U3TidraczfbYc'
 });
 exports.default = cloudinary_1.v2;
-//# sourceMappingURL=cloudinary.js.map

@@ -20,6 +20,7 @@ app.use((0, morgan_1.default)("dev"));
 app.use((0, cors_1.default)({
     origin: ["https://blog-management-system-omega.vercel.app", "http://localhost:5000"],
     credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
 }));
 app.use((0, cookie_parser_1.default)());
 // For parsing application/json
@@ -36,4 +37,3 @@ app.listen(PORT, () => {
     console.log("Server is running : http://localhost:4000");
 });
 exports.default = app;
-//# sourceMappingURL=server.js.map

@@ -26,7 +26,6 @@ userRouter.post("/logout", UserController.logout);
 userRouter.post("/register", UserController.register);
 userRouter.post("/login", UserController.login);
 userRouter.post("/createBlog", privateRoute_1.default, multer_1.ImageUpload.single('image'), UserController.createBlog);
-userRouter.delete("/deleteBlog/:id", UserController.deleteBlog);
+userRouter.delete("/deleteBlog/:id", privateRoute_1.default, UserController.deleteBlog);
 userRouter.put("/updateBlog", privateRoute_1.default, multer_1.ImageUpload.single('image'), UserController.updateBlog);
 exports.default = userRouter;
-//# sourceMappingURL=userRouter.js.map

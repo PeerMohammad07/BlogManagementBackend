@@ -18,6 +18,7 @@ const userAuth = async (req, res, next) => {
             res.cookie("userToken", newUserToken, {
                 httpOnly: true,
                 maxAge: 3600000,
+                secure: process.env.NODE_ENV != "production"
             });
             userToken = newUserToken;
         }
@@ -53,4 +54,3 @@ async function refreshAccessToken(refreshToken) {
     }
 }
 exports.default = userAuth;
-//# sourceMappingURL=privateRoute.js.map

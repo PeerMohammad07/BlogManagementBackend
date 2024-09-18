@@ -27,7 +27,7 @@ userRouter.post("/register",UserController.register)
 userRouter.post("/login",UserController.login)
 userRouter.post("/createBlog",userAuth,ImageUpload.single('image'),UserController.createBlog)
 
-userRouter.delete("/deleteBlog/:id",UserController.deleteBlog)
+userRouter.delete("/deleteBlog/:id",userAuth,UserController.deleteBlog)
 userRouter.put("/updateBlog",userAuth,ImageUpload.single('image'),UserController.updateBlog)
 
 export default userRouter

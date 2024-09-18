@@ -9,9 +9,8 @@
     "forceConsistentCasingInFileNames": true, // Ensure that casing is consistent in file names
     "skipLibCheck": true,                   // Skip type checking of declaration files
     "resolveJsonModule": true,              // Include modules imported with .json extension
-    "sourceMap": true ,
-    "typeRoots": ["./node_modules/@types"],
-    "types": ["node", "express", "multer", "bcrypt", "jsonwebtoken", "cors", "cookie-parser"]
+    "sourceMap": false ,
+    "types": ["node", "express", "bcrypt", "cors", "cookie-parser", "jsonwebtoken", "multer"]
   },
   "include": ["src/**/*.ts"],               // Include all .ts files in the src directory
   "exclude": ["node_modules", "dist"]       // Exclude node_modules and dist directories
