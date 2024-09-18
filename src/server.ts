@@ -17,7 +17,7 @@ app.use(morgan("dev"))
 
 // Setting Cors 
 app.use(cors({
-  origin: "http://localhost:5000",
+  origin: "https://blog-management-client.vercel.app",
   credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
 }));
