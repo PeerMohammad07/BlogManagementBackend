@@ -17,10 +17,10 @@ app.use(morgan("dev"))
 
 // Setting Cors 
 app.use(cors({
-  origin : ["https://blog-management-system-omega.vercel.app","http://localhost:5000"],
+  origin: "http://localhost:5000",
   credentials: true,
-  methods : ["GET","POST","PUT","PATCH","DELETE"]
-}))
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
+}));
 
 app.use(cookieParser())
 
