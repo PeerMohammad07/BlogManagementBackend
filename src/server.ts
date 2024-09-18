@@ -17,9 +17,11 @@ app.use(morgan("dev"))
 
 // Setting Cors 
 app.use(cors({
-  origin: "*",
+  origin: "https://blog-management-client.vercel.app",
   credentials: true,
 }));
+
+app.options('*', cors());
 
 app.use(cookieParser())
 
